@@ -5,15 +5,15 @@ textInput.addEventListener("input", function() {
   let length = textInput.value.length;
 
   if (length > 50) {
-    textInput.value = textInput.value.slice(0, 50);
-    length = 50;
+    textInput.value = textInput.value.slice(0, 50);// remove characters beyond the limit which is 50
+    length = 50;// update length to reflect the truncated input
   }
 
-  charCount.textContent = `Character Count: ${length}/50`;
+  charCount.textContent = `Character Count: ${length}/50`;// update the character count display
 
   if (length === 50) {
-    charCount.style.color = "red";
+    charCount.style.color = "red";// change color to red when the limit is reached
   } else {
-    charCount.style.color = "black";
+    charCount.style.color = "black";// reset color to black when under the limit
   }
 }) 
